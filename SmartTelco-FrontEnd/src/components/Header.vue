@@ -11,7 +11,7 @@
         />
       </RouterLink>
 
-      <!-- Desktop Nav -->
+      <!-- Desktop Navbar -->
       <div class="hidden md:flex items-center gap-2">
         <RouterLink 
           to="/home" 
