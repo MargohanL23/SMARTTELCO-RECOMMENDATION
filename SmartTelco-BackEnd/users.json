@@ -1,0 +1,53 @@
+{
+    "next_customer_id": 10008,
+    "users": [
+        {
+            "customer_id": "C00000",
+            "email": "admin@smarttelco.com",
+            "password": "adminpassword",
+            "role": "Admin"
+        },
+        {
+            "customer_id": "C10001",
+            "email": "gogo@gogo.com",
+            "password": "gogo1234",
+            "role": "User"
+        },
+        {
+            "customer_id": "C10002",
+            "email": "baba@baba.com",
+            "password": "baba1234",
+            "role": "User"
+        },
+        {
+            "customer_id": "C10003",
+            "email": "varel@varel.com",
+            "password": "varel1234",
+            "role": "User"
+        },
+        {
+            "customer_id": "C10004",
+            "email": "pret@pret.com",
+            "password": "pret1234",
+            "role": "User"
+        },
+        {
+            "customer_id": "C10005",
+            "email": "icak@gmail.com",
+            "password": "hoerunnisa15",
+            "role": "User"
+        },
+        {
+            "customer_id": "C10006",
+            "email": "dimas@dimas.com",
+            "password": "dimas123",
+            "role": "User"
+        },
+        {
+            "customer_id": "C10007",
+            "email": "gaga@gaga.com",
+            "password": "gaga1234",
+            "role": "User"
+        }
+    ]
+}
