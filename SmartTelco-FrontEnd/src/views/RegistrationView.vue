@@ -1,12 +1,12 @@
 <template>
       <div class="min-h-screen flex items-center justify-center" >
-      <div class="w-full max-w-md rounded-xl shadow-xl p-8 bg-white/60 backdrop-blur-md border border-white/20">
+      <div class="w-full max-w-md rounded-xl shadow-xl p-8 bg-gray-300/60 backdrop-blur-md border border-white/20">
 
       <div class="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           class="mx-auto h-12 w-auto"
-          src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=rose&shade=500"
-          alt="SmartTelco"
+          src="/images/logo_smarttelcoo.png"
+            alt="SmartTelco"
         />
         <h2 class="mt-8 text-center text-2xl font-bold tracking-tight" style="color:#842A3B;">
           SmartTelco Register

@@ -2,16 +2,14 @@
   <header class="fixed top-0 left-0 w-full backdrop-blur-xl bg-gradient-to-b from-blue-900/40 to-blue-900/20 border-b border-blue-400/20 shadow-lg z-50">
     <nav class="max-w-8xl mx-auto flex items-center justify-between py-4 px-6">
 
-      <!-- Logo -->
       <RouterLink to="/home" class="flex items-center gap-2 hover:opacity-80 transition duration-300">
         <img 
           src="/images/SmartTelco_logo.png"
           alt="SmartTelco Logo"
-          class="h-10 w-auto object-contain"
+          class="h-12 w-auto object-contain" 
         />
       </RouterLink>
 
-      <!-- Desktop Navbar -->
       <div class="hidden md:flex items-center gap-2">
         <RouterLink 
           to="/home" 
@@ -53,19 +51,17 @@
         <template v-else>
           <button 
             @click="logoutUser" 
-            class="px-6 py-2 rounded-full text-red-500 font-semibold hover:bg-red-500/30 hover:text-red-100 transition duration-300 border border-transparent hover:border-red-400/50"
+            class="px-6 py-2 rounded-full bg-gradient-to-r from-red-500 to-red-600 text-white font-bold hover:from-red-400 hover:to-red-500 transition duration-300 shadow-lg hover:shadow-xl"
           >
             Logout
           </button>
         </template>
       </div>
 
-      <!-- Smooth Spring Burger Button -->
       <button 
         @click="toggleMenu"
         class="md:hidden relative w-10 h-10 flex items-center justify-center focus:outline-none"
       >
-        <!-- Line 1 -->
         <span
           :class="[
             'burger-line',
@@ -73,7 +69,6 @@
           ]"
         ></span>
 
-        <!-- Line 2 -->
         <span
           :class="[
             'burger-line',
@@ -81,7 +76,6 @@
           ]"
         ></span>
 
-        <!-- Line 3 -->
         <span
           :class="[
             'burger-line',
@@ -92,7 +86,6 @@
 
     </nav>
 
-    <!-- Mobile Menu -->
     <div
       v-if="mobileOpen"
       class="md:hidden backdrop-blur-xl bg-blue-900/40 border-t border-blue-400/20 animate-slideDown"
@@ -144,7 +137,7 @@
         <template v-else>
           <button 
             @click="logoutUser" 
-            class="px-4 py-3 rounded-lg text-red-300 font-semibold hover:bg-red-500/30 hover:text-red-100 transition duration-300 border border-transparent hover:border-red-400/50 text-left"
+            class="px-4 py-3 rounded-lg bg-gradient-to-r from-red-500 to-red-600 text-white font-bold hover:from-red-400 hover:to-red-500 transition duration-300 text-center"
           >
             Logout
           </button>
@@ -156,16 +149,34 @@
 
 <script setup>
 import { RouterLink, useRouter } from "vue-router";
-import { ref, onMounted } from "vue";
+// --- IMPOR BARU: onUnmounted ---
+import { ref, onMounted, onUnmounted } from "vue"; 
 import { getUser, clearUser } from "../utils/storage";
 
 const router = useRouter();
 const isLoggedIn = ref(false);
 const mobileOpen = ref(false);
 
+// --- FUNGSI BARU UNTUK MENGAMBIL STATUS LOGIN ---
+const checkLoginStatus = () => {
+    isLoggedIn.value = !!getUser();
+};
+
 onMounted(() => {
-  isLoggedIn.value = !!getUser();
+  // Panggil pertama kali
+  checkLoginStatus(); 
+
+  // --- BARIS PERBAIKAN PENTING ---
+  // Mendengarkan event 'login-success' dari window
+  window.addEventListener('login-success', checkLoginStatus);
 });
+
+// --- BARIS PERBAIKAN PENTING ---
+// Hapus listener saat komponen dilepas untuk menghindari kebocoran memori
+onUnmounted(() => {
+    window.removeEventListener('login-success', checkLoginStatus);
+});
+
 
 function toggleMenu() {
   mobileOpen.value = !mobileOpen.value;
@@ -177,7 +188,8 @@ function closeMenu() {
 
 function logoutUser() {
   clearUser();
-  isLoggedIn.value = false;
+  // Panggil checkLoginStatus untuk mengupdate isLoggedIn segera
+  checkLoginStatus(); 
   router.push("/login");
   closeMenu();
 }

@@ -23,7 +23,7 @@
                 <div class="h-1 w-24 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
               </div>
 
-              <p class="text-blue-750/200 text-lg leading-relaxed font-light">
+              <p class="text-blue-750/200 text-lg leading-relaxed font-light text-justify">
                 Didukung oleh <span class="font-semibold text-blue-900">Machine Learning (XGBoost)</span>, sistem ini melakukan personalisasi penawaran paket dengan akurasi tinggi. Kami menganalisis secara multidimensi pola perilaku pelanggan—mulai dari frekuensi top-up, rata-rata penggunaan data (GB), durasi panggilan (Menit), hingga skor keluhan—untuk memprediksi penawaran yang paling optimal.
               </p>
 
@@ -73,7 +73,7 @@
               <h3 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-400 mb-4 text-center">
                 Presisi Tinggi
               </h3>
-              <p class="text-blue-800/70 text-sm leading-relaxed">
+              <p class="text-blue-800/70 text-sm leading-relaxed text-justify">
                 Menggunakan algoritma Machine Learning mutakhir yang dilatih dengan dataset masif perilaku historis pelanggan. Sistem menganalisis variabel kompleks secara real-time untuk menghasilkan prediksi <span class="font-semibold text-blue-900">Target Offer</span> dengan tingkat akurasi tertinggi.
               </p>
             </div>
@@ -87,7 +87,7 @@
               <h3 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-800 to-emerald-600 mb-4 text-center">
                 Peningkatan Revenue
               </h3>
-              <p class="text-green-700/100 text-sm leading-relaxed">
+              <p class="text-green-700/100 text-sm leading-relaxed text-justify">
                 Mentransformasi strategi penjualan menjadi pendekatan presisi yang berdampak langsung pada <span class="font-semibold text-green-800">Bottom Line</span>. Meningkatkan <span class="font-semibold">Average Revenue Per User</span> sekaligus menekan <span class="font-semibold">marketing waste</span> untuk <span class="font-semibold">Return on Investment</span> maksimal.
               </p>
             </div>
@@ -101,7 +101,7 @@
               <h3 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-400 mb-4 text-center">
                 Segmentasi Dinamis
               </h3>
-              <p class="text-purple-800/70 text-sm leading-relaxed">
+              <p class="text-purple-800/70 text-sm leading-relaxed text-justify">
                 Sistem mampu mendeteksi perubahan perilaku pelanggan secara instan dan mengkategorikan mereka ke dalam mikro-segmen spesifik seperti <span class="font-semibold text-purple-900">High-Bandwidth Streamers</span> atau <span class="font-semibold">Price-Sensitive Users</span>.
               </p>
             </div>
