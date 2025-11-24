@@ -55,7 +55,11 @@
         </div>
       </div>
 
-      <div class="max-w-7xl mx-auto">
+      <div 
+        id="businessSection" 
+        class="max-w-7xl mx-auto transition-opacity duration-1000 transform"
+        :class="{'opacity-100 translate-y-0': isBusinessVisible, 'opacity-0 translate-y-10': !isBusinessVisible}"
+      >
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-300 mb-4">
             Nilai Bisnis & Inovasi
@@ -65,7 +69,8 @@
 
         <div class="grid md:grid-cols-3 gap-8">
           
-          <div class="group relative bg-gradient-to-br from-blue-500/10 to-indigo-500/10 backdrop-blur-md border border-blue-400/20 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:border-blue-300/40 transition duration-300 transform hover:-translate-y-2">
+          <div class="group relative bg-gradient-to-br from-blue-500/10 to-indigo-500/10 backdrop-blur-md border border-blue-400/20 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:border-blue-300/40 transition duration-300 transform hover:-translate-y-2"
+               :style="{ transitionDelay: isBusinessVisible ? '0ms' : '0ms' }"> 
             <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl pointer-events-none"></div>
             
             <div class="relative z-10">
@@ -79,7 +84,8 @@
             </div>
           </div>
 
-          <div class="group relative bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-md border border-green-400/20 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:border-green-300/40 transition duration-300 transform hover:-translate-y-2">
+          <div class="group relative bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-md border border-green-400/20 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:border-green-300/40 transition duration-300 transform hover:-translate-y-2"
+               :style="{ transitionDelay: isBusinessVisible ? '200ms' : '0ms' }"> 
             <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl pointer-events-none"></div>
             
             <div class="relative z-10">
@@ -93,7 +99,8 @@
             </div>
           </div>
 
-          <div class="group relative bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-md border border-purple-400/20 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:border-purple-300/40 transition duration-300 transform hover:-translate-y-2">
+          <div class="group relative bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-md border border-purple-400/20 p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:border-purple-300/40 transition duration-300 transform hover:-translate-y-2"
+               :style="{ transitionDelay: isBusinessVisible ? '400ms' : '0ms' }">
             <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl pointer-events-none"></div>
             
             <div class="relative z-10">
@@ -112,7 +119,11 @@
 
       ---
       
-      <div class="max-w-7xl mx-auto">
+      <div 
+        id="offersSection" 
+        class="max-w-7xl mx-auto transition-opacity duration-1000 transform"
+        :class="{'opacity-100 translate-y-0': isOffersVisible, 'opacity-0 translate-y-10': !isOffersVisible}"
+      >
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-300 mb-4">
             Jelajahi Jenis Penawaran Kami
@@ -125,7 +136,7 @@
 
         <div class="grid md:grid-cols-3 gap-8">
           
-          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1">
+          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1" :style="{ transitionDelay: isOffersVisible ? '0ms' : '0ms' }">
             <div class="flex items-center space-x-4 mb-4">
               <div class="text-3xl text-blue-600">🚀</div>
               <h3 class="text-xl font-bold text-gray-800">Data Booster</h3>
@@ -135,7 +146,7 @@
             </p>
           </div>
 
-          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1">
+          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1" :style="{ transitionDelay: isOffersVisible ? '100ms' : '0ms' }">
             <div class="flex items-center space-x-4 mb-4">
               <div class="text-3xl text-indigo-600">📱</div>
               <h3 class="text-xl font-bold text-gray-800">Device Upgrade Offer</h3>
@@ -145,7 +156,7 @@
             </p>
           </div>
 
-          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1">
+          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1" :style="{ transitionDelay: isOffersVisible ? '200ms' : '0ms' }">
             <div class="flex items-center space-x-4 mb-4">
               <div class="text-3xl text-green-600">👨‍👩‍👧‍👦</div>
               <h3 class="text-xl font-bold text-gray-800">Family Plan Offer</h3>
@@ -155,7 +166,7 @@
             </p>
           </div>
 
-          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1">
+          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1" :style="{ transitionDelay: isOffersVisible ? '300ms' : '0ms' }">
             <div class="flex items-center space-x-4 mb-4">
               <div class="text-3xl text-yellow-600">⭐</div>
               <h3 class="text-xl font-bold text-gray-800">General Offer</h3>
@@ -165,17 +176,17 @@
             </p>
           </div>
 
-          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1">
+          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1" :style="{ transitionDelay: isOffersVisible ? '400ms' : '0ms' }">
             <div class="flex items-center space-x-4 mb-4">
               <div class="text-3xl text-red-600">🛡️</div>
               <h3 class="text-xl font-bold text-gray-800">Retention Offer</h3>
             </div>
             <p class="text-sm text-gray-600 leading-relaxed text-justify">
-             Retention Offer adalah penawaran yang secara khusus ditujukan kepada pengguna dengan risiko churn, yakni pengguna yang berpotensi berhenti menggunakan layanan. Paket ini biasanya bersifat personalisasi, disesuaikan berdasarkan pola kebiasaan setiap pengguna, serta mencakup insentif seperti diskon eksklusif, tambahan kuota, atau upgrade layanan tanpa biaya tambahan. Tujuan strategis dari Retention Offer adalah mempertahankan pengguna bernilai tinggi, meminimalkan churn rate, dan menjaga profitabilitas jangka panjang melalui loyalty reinforcement.
+              Retention Offer adalah penawaran yang secara khusus ditujukan kepada pengguna dengan risiko churn, yakni pengguna yang berpotensi berhenti menggunakan layanan. Paket ini biasanya bersifat personalisasi, disesuaikan berdasarkan pola kebiasaan setiap pengguna, serta mencakup insentif seperti diskon eksklusif, tambahan kuota, atau upgrade layanan tanpa biaya tambahan. Tujuan strategis dari Retention Offer adalah mempertahankan pengguna bernilai tinggi, meminimalkan churn rate, dan menjaga profitabilitas jangka panjang melalui loyalty reinforcement.
             </p>
           </div>
 
-          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1">
+          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1" :style="{ transitionDelay: isOffersVisible ? '500ms' : '0ms' }">
             <div class="flex items-center space-x-4 mb-4">
               <div class="text-3xl text-cyan-600">✈️</div>
               <h3 class="text-xl font-bold text-gray-800">Roaming Pass</h3>
@@ -185,7 +196,7 @@
             </p>
           </div>
 
-          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1">
+          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1" :style="{ transitionDelay: isOffersVisible ? '600ms' : '0ms' }">
             <div class="flex items-center space-x-4 mb-4">
               <div class="text-3xl text-pink-600">📺</div>
               <h3 class="text-xl font-bold text-gray-800">Streaming Partner Pack</h3>
@@ -195,7 +206,7 @@
             </p>
           </div>
 
-          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1">
+          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1" :style="{ transitionDelay: isOffersVisible ? '700ms' : '0ms' }">
             <div class="flex items-center space-x-4 mb-4">
               <div class="text-3xl text-orange-600">🎁</div>
               <h3 class="text-xl font-bold text-gray-800">Top-Up Promo</h3>
@@ -205,7 +216,7 @@
             </p>
           </div>
 
-          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1">
+          <div class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 transform hover:-translate-y-1" :style="{ transitionDelay: isOffersVisible ? '800ms' : '0ms' }">
             <div class="flex items-center space-x-4 mb-4">
               <div class="text-3xl text-purple-600">📞</div>
               <h3 class="text-xl font-bold text-gray-800">Voice Bundle</h3>
@@ -220,7 +231,11 @@
 
       ---
 
-      <div class="max-w-4xl mx-auto">
+      <div 
+        id="ctaSection" 
+        class="max-w-4xl mx-auto transition-opacity duration-1000 transform"
+        :class="{'opacity-100 translate-y-0': isCtaVisible, 'opacity-0 translate-y-10': !isCtaVisible}"
+      >
         <div class="relative bg-gradient-to-br from-blue-500/20 to-indigo-500/20 backdrop-blur-lg border border-blue-300/30 rounded-3xl p-12 shadow-2xl text-center overflow-hidden group">
           <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
           <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 group-hover:opacity-30 transition duration-500"></div>
@@ -249,6 +264,59 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+
+// 1. Definisikan status reaktif untuk setiap section
+const isBusinessVisible = ref(false);
+const isOffersVisible = ref(false);
+const isCtaVisible = ref(false);
+
+let observers = [];
+
+const setupIntersectionObserver = () => {
+    // Threshold 0.1 berarti observer terpicu ketika 10% elemen terlihat.
+    // Kita gunakan threshold ini untuk mendeteksi MASUK dan KELUAR dari viewport.
+    const observerOptions = {
+        root: null, 
+        rootMargin: '0px',
+        threshold: 0.1 
+    };
+
+    const sections = [
+        { ref: 'businessSection', state: isBusinessVisible },
+        { ref: 'offersSection', state: isOffersVisible },
+        { ref: 'ctaSection', state: isCtaVisible },
+    ];
+
+    sections.forEach(section => {
+        const element = document.getElementById(section.ref);
+        if (element) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // KETIKA MASUK VIEWPORT: Tampilkan (Picup animasi)
+                        section.state.value = true;
+                    } else {
+                        // KETIKA KELUAR VIEWPORT: Sembunyikan kembali (Reset animasi)
+                        section.state.value = false;
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(element);
+            observers.push(observer);
+        }
+    });
+};
+
+onMounted(() => {
+    setupIntersectionObserver();
+});
+
+onBeforeUnmount(() => {
+    // Hapus observers saat komponen dilepas
+    observers.forEach(observer => observer.disconnect());
+});
 </script>
 
 <style scoped>

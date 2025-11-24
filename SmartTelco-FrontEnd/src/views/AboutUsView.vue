@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full min-h-screen font-sans bg-white"> 
+  <div class="w-full h-full min-h-screen font-sans bg-white"> 
 
-    <div class="relative h-[500px] flex items-center justify-center overflow-hidden">
+    <div class="w-full h-full relative h-[700px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img 
       src="/images/foto atmin.jpg" 
@@ -26,14 +26,18 @@
       </div>
     </div>
 
-    <div class="relative py-20 px-4 max-w-7xl mx-auto overflow-hidden">
+    <div 
+      id="missionSection"
+      class="relative py-20 px-4 max-w-7xl mx-auto overflow-hidden transition-opacity duration-700 transform"
+      :class="{'opacity-100 translate-y-0': isMissionVisible, 'opacity-0 translate-y-10': !isMissionVisible}"
+    >
       <span class="absolute top-10 right-0 text-[150px] font-bold text-gray-100 -z-10 opacity-50 select-none pointer-events-none hidden lg:block">
         ABOUT
       </span>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
-        <div class="relative group cursor-pointer">
+        <div class="relative group cursor-pointer mx-auto lg:mx-0">
           <div class="overflow-hidden rounded-lg shadow-2xl transform transition duration-500 hover:scale-[1.01]">
             <img 
               src="/images/our_mission.jpg" 
@@ -67,7 +71,11 @@
       </div>
     </div>
 
-    <div class="py-20 bg-gray-50 px-4">
+    <div 
+      id="teamSection"
+      class="py-20 bg-gray-50 px-4 transition-opacity duration-700 transform"
+      :class="{'opacity-100 translate-y-0': isTeamVisible, 'opacity-0 translate-y-10': !isTeamVisible}"
+    >
       <div class="max-w-7xl mx-auto text-center">
         
         <h2 class="text-3xl font-bold text-[#842A3B] mb-3">OUR TEAM</h2>
@@ -77,7 +85,13 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           
-          <div v-for="(member, index) in teamMembers" :key="index" class="group">
+          <div 
+            v-for="(member, index) in teamMembers" 
+            :key="index" 
+            class="group transition-opacity duration-500 transform"
+            :style="{ transitionDelay: isTeamVisible ? `${index * 100}ms` : '0ms' }"
+            :class="{'opacity-100 translate-y-0': isTeamVisible, 'opacity-0 translate-y-5': !isTeamVisible}"
+          >
             <div class="relative overflow-hidden rounded-lg shadow-md mb-4 h-64 w-full bg-gray-200">
               <img 
                 :src="member.image" 
@@ -117,11 +131,57 @@
   </div>
 </template>
 <script setup>
-// ... (script setup tidak diubah)
-import { ref } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-// Data Anggota Tim (5 Orang)
-// Menggunakan gambar placeholder (Unsplash/UI Faces)
+// 1. Definisikan status reaktif untuk setiap section
+const isMissionVisible = ref(false);
+const isTeamVisible = ref(false);
+
+let observers = [];
+
+const setupIntersectionObserver = () => {
+    const observerOptions = {
+        root: null, 
+        rootMargin: '0px',
+        threshold: 0.1 // Triggers when 10% of the element is visible
+    };
+
+    const sections = [
+        { ref: 'missionSection', state: isMissionVisible },
+        { ref: 'teamSection', state: isTeamVisible },
+    ];
+
+    sections.forEach(section => {
+        const element = document.getElementById(section.ref);
+        if (element) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // KETIKA MASUK VIEWPORT: Tampilkan
+                        section.state.value = true;
+                    } else {
+                        // KETIKA KELUAR VIEWPORT: Sembunyikan kembali (Reset animasi)
+                        section.state.value = false;
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(element);
+            observers.push(observer);
+        }
+    });
+};
+
+onMounted(() => {
+    setupIntersectionObserver();
+});
+
+onBeforeUnmount(() => {
+    // Hapus observers saat komponen dilepas
+    observers.forEach(observer => observer.disconnect());
+});
+
+// Data Anggota Tim
 const teamMembers = ref([
   {
     name: "Margohan L. Siringo Ringo",
@@ -148,8 +208,8 @@ const teamMembers = ref([
     name: "Hoerunisa",
     role: "Machine Learning Engineer",
     image: "/images/foto_ica.jpg",
-    instagram: "https://instagram.com/hoerunisa",
-    linkedin: "https://linkedin.com/in/hoerunisa"
+    instagram: "https://www.instagram.com/_hoerunnisaa?igsh=MTN4dDBoMW9mOWh6Yg%3D%3D&utm_source=qr",
+    linkedin: "http://linkedin.com/in/hoerunnisaa"
   },
   {
     name: "Moch. Faisal Syahwaludin",
