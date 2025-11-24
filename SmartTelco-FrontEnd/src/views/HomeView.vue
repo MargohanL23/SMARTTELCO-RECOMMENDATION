@@ -225,11 +225,9 @@
               Voice Bundle adalah paket panggilan suara yang menawarkan kuota menit telepon lebih tinggi dengan tarif yang lebih ekonomis dibandingkan tarif reguler. Paket ini dirancang bagi pengguna yang masih intens menggunakan layanan panggilan suara, baik untuk kebutuhan bisnis maupun komunikasi sehari-hari. Voice Bundle juga sering kali mencakup kombinasi panggilan ke sesama operator, ke operator lain, serta ke nomor internasional, memberikan fleksibilitas penuh dan efisiensi biaya.
             </p>
           </div>
-          
         </div>
       </div>
 
-      ---
 
       <div 
         id="ctaSection" 

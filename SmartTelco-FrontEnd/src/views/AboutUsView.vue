@@ -53,12 +53,12 @@
             MEMBERIKAN REKOMENDASI PAKET KEPADA PENGGUNA
           </h2>
           
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-600 leading-relaxed text-justify">
             Misi kami adalah menjembatani kesenjangan antara penawaran produk Telco dan kebutuhan riil pelanggan. Kami meyakini bahwa setiap pelanggan unik, sehingga solusi paket tidak boleh bersifat umum. Melalui arsitektur data yang cerdas, kami memastikan setiap rekomendasi adalah yang paling relevan.
           </p>
           
-          <p class="text-gray-600 leading-relaxed">
-            Dengan model prediktif *XGBoost* yang dilatih pada data perilaku historis (seperti pengeluaran, penggunaan data/panggilan, dan riwayat keluhan), kami menganalisis pola customer behavior untuk merekomendasikan *Target Offer* yang paling efisien. Tujuan akhirnya adalah *memaksimalkan *revenue Telco** sekaligus *meningkatkan *Customer Lifetime Value** melalui kepuasan yang optimal.
+          <p class="text-gray-600 leading-relaxed text-justify">
+            Dengan model prediktif <span class="font-semibold">XGBoost</span> yang dilatih pada data perilaku historis (seperti pengeluaran, penggunaan data/panggilan, dan riwayat keluhan), kami menganalisis pola customer behavior untuk merekomendasikan <span class="font-semibold">Target Offer</span> yang paling efisien. Tujuan akhirnya adalah memaksimalkan <span class="font-semibold">revenue Telco</span> sekaligus meningkatkan Customer Lifetime Value melalui kepuasan yang optimal.
           </p>
 
           <div class="pt-4">
