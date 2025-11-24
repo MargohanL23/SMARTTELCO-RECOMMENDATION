@@ -1,6 +1,14 @@
 <template>
   <footer class="mt-0 py-6 w-full backdrop-blur-xl bg-gradient-to-b from-blue-900/40 to-blue-900/20 border-b border-blue-400/20 shadow-lg z-50">
 
+    <div class="flex justify-center mb-4">
+      <img
+        src="/images/SmartTelco_logo.png"
+        alt="SmartTelco Logo"
+        class="h-10 w-auto object-contain"
+      />
+    </div>
+
     <div class="flex justify-center space-x-8 text-sm font-semibold mb-4">
       <RouterLink
         to="/home"
