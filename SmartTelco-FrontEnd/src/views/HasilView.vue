@@ -71,7 +71,7 @@
         <p class="text-gray-400 text-sm mb-6">Data riwayat ini telah tersimpan. Coba ubah parameter input untuk melihat perubahan rekomendasi.</p>
         
         <router-link 
-          to="/home" 
+          to="/simulation" 
           class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition transform hover:-translate-y-1 shadow-lg hover:shadow-blue-500/50"
         >
           Simulasikan Profil Baru
