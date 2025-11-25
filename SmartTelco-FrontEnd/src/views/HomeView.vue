@@ -40,15 +40,15 @@
             </div>
 
             <div class="hidden md:flex justify-center items-center">
-              <div class="relative w-full max-w-sm">
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl filter blur-2xl opacity-40"></div>
-                <div class="relative bg-gradient-to-br from-blue-900/50 backdrop-blur border border-blue-400/20 rounded-3xl overflow-hidden shadow-2xl p-1">
-                  <img
-                    src="/images/SmartTelco_ilustration.jpg"
-                    alt="Hero Illustration"
-                    class="w-full h-96 object-cover rounded-3xl hover:scale-105 transition-transform duration-500"
-                  />  
-                </div>
+              <div class="relative w-full" :style="{ maxWidth: '600px' }"> 
+
+                <img
+                  src="/images/SmartTelco_ilustration.png"
+                  alt="Hero Illustration"
+                  class="w-full object-cover rounded-3xl hover:scale-105 transition-transform duration-500"
+                  :style="{ height: '450px' }" 
+                />  
+                
               </div>
             </div>
           </div>

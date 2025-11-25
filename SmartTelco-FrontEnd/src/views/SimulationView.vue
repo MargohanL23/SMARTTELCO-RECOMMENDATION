@@ -1,5 +1,13 @@
 <template>
   <div class="min-h-screen w-full overflow-x-hidden bg-white-900 pb-10">
+
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="/images/LOGO3D_SMARTTELCO-NoBG.png" 
+        alt="Background Illustration" 
+        
+      />
+      </div>
     
     <div class="container mx-auto px-4 md:px-0">
       
@@ -175,6 +183,7 @@
           <span v-if="isLoading">Memproses...</span>
           <span v-else>DAPATKAN REKOMENDASI</span>
         </button>
+        
         
       </div>
     </div>
