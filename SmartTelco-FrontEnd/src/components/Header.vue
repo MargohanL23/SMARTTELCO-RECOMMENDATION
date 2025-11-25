@@ -1,7 +1,7 @@
 <template>
   <header 
     :class="[
-      'fixed top-0 left-0 w-full backdrop-blur-xl bg-gradient-to-b from-blue-900/40 to-blue-900/20 border-b border-blue-400/20 shadow-lg z-50 transition-all duration-500',
+      'fixed top-0 left-0 w-full backdrop-blur-xl bg-gradient-to-b from-gray-900/40 to-blue-900/20 border-b border-gray-400/20 shadow-lg z-50 transition-all duration-500',
       isHidden ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'
     ]"
   >
@@ -22,7 +22,7 @@
         <template v-if="isLoggedIn">
           <RouterLink 
             to="/home" 
-            class="px-6 py-2 rounded-full text-blue-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+            class="px-6 py-2 rounded-full text-gray-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
           >
             Home
           </RouterLink>
@@ -103,7 +103,7 @@
     <!-- MOBILE MENU -->
     <div
       v-if="mobileOpen"
-      class="md:hidden backdrop-blur-xl bg-blue-900/40 border-t border-blue-400/20 animate-slideDown"
+      class="md:hidden backdrop-blur-xl bg-gray-900/40 border-t border-gray-400/20 animate-slideDown"
     >
       <div class="flex flex-col py-4 px-6 space-y-2">
 
@@ -112,7 +112,7 @@
           <RouterLink 
             to="/home" 
             @click="closeMenu" 
-            class="px-4 py-3 rounded-lg text-blue-100 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+            class="px-4 py-3 rounded-lg text-gray-100 font-semibold hover:bg-gray-500/30 hover:text-white transition duration-300 border border-transparent hover:border-gray-400/50"
           >
             Home
           </RouterLink>
