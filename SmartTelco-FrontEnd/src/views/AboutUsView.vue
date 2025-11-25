@@ -5,7 +5,7 @@
   
   <div class="absolute inset-0 z-0">
     <img 
-      src="/images/foto atmin.jpg" 
+      src="/images/foto atmin (3).jpg" 
       alt="About Us Hero" 
       class="w-full h-full object-cover brightness-50"
     />
