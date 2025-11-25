@@ -3,7 +3,7 @@
 
     <div class="flex justify-center mb-4">
       <img
-        src="/images/SmartTelco_logo.png"
+        src="/images/logo_smarttelco.png"
         alt="SmartTelco Logo"
         class="h-10 w-auto object-contain"
       />
