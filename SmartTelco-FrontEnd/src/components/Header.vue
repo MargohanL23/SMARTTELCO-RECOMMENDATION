@@ -4,27 +4,33 @@
 
       <RouterLink to="/home" class="flex items-center gap-2 hover:opacity-80 transition duration-300">
         <img 
-          src="/images/SmartTelco_logo.png"
+          src="/images/logo_smarttelco.png"
           alt="SmartTelco Logo"
           class="h-12 w-auto object-contain" 
         />
       </RouterLink>
 
+      <!-- DESKTOP NAV -->
       <div class="hidden md:flex items-center gap-2">
-        <RouterLink 
-          to="/home" 
-          class="px-6 py-2 rounded-full text-blue-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
-        >
-          Home
-        </RouterLink>
-        
-        <RouterLink 
-          to="/simulation" 
-          class="px-6 py-2 rounded-full text-blue-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
-        >
-          Simulation
-        </RouterLink>
-        
+
+        <!-- TAMPIL SAAT LOGIN -->
+        <template v-if="isLoggedIn">
+          <RouterLink 
+            to="/home" 
+            class="px-6 py-2 rounded-full text-blue-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+          >
+            Home
+          </RouterLink>
+
+          <RouterLink 
+            to="/simulation" 
+            class="px-6 py-2 rounded-full text-blue-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+          >
+            Simulation
+          </RouterLink>
+        </template>
+
+        <!-- ABOUT SELALU ADA -->
         <RouterLink 
           to="/about" 
           class="px-6 py-2 rounded-full text-blue-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
@@ -32,6 +38,7 @@
           About Us
         </RouterLink>
 
+        <!-- TAMPIL SAAT TIDAK LOGIN -->
         <template v-if="!isLoggedIn">
           <RouterLink 
             to="/login" 
@@ -39,7 +46,7 @@
           >
             Login
           </RouterLink>
-          
+
           <RouterLink 
             to="/register" 
             class="px-6 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 font-bold hover:from-yellow-300 hover:to-orange-300 transition duration-300 shadow-lg hover:shadow-xl"
@@ -48,6 +55,7 @@
           </RouterLink>
         </template>
 
+        <!-- TAMPIL SAAT LOGIN -->
         <template v-else>
           <button 
             @click="logoutUser" 
@@ -58,6 +66,7 @@
         </template>
       </div>
 
+      <!-- BURGER BUTTON -->
       <button 
         @click="toggleMenu"
         class="md:hidden relative w-10 h-10 flex items-center justify-center focus:outline-none"
@@ -86,28 +95,33 @@
 
     </nav>
 
+    <!-- MOBILE MENU -->
     <div
       v-if="mobileOpen"
       class="md:hidden backdrop-blur-xl bg-blue-900/40 border-t border-blue-400/20 animate-slideDown"
     >
       <div class="flex flex-col py-4 px-6 space-y-2">
 
-        <RouterLink 
-          to="/home" 
-          @click="closeMenu" 
-          class="px-4 py-3 rounded-lg text-blue-100 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
-        >
-          Home
-        </RouterLink>
-        
-        <RouterLink 
-          to="/simulation" 
-          @click="closeMenu" 
-          class="px-4 py-3 rounded-lg text-blue-100 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
-        >
-          Simulation
-        </RouterLink>
-        
+        <!-- HOME & SIMULATION — hanya jika login -->
+        <template v-if="isLoggedIn">
+          <RouterLink 
+            to="/home" 
+            @click="closeMenu" 
+            class="px-4 py-3 rounded-lg text-blue-100 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+          >
+            Home
+          </RouterLink>
+
+          <RouterLink 
+            to="/simulation" 
+            @click="closeMenu" 
+            class="px-4 py-3 rounded-lg text-blue-100 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+          >
+            Simulation
+          </RouterLink>
+        </template>
+
+        <!-- ABOUT — selalu tampil -->
         <RouterLink 
           to="/about" 
           @click="closeMenu" 
@@ -116,6 +130,7 @@
           About Us
         </RouterLink>
 
+        <!-- LOGIN & REGISTER — jika tidak login -->
         <template v-if="!isLoggedIn">
           <RouterLink 
             to="/login" 
@@ -134,6 +149,7 @@
           </RouterLink>
         </template>
 
+        <!-- LOGOUT — jika login -->
         <template v-else>
           <button 
             @click="logoutUser" 
@@ -149,7 +165,6 @@
 
 <script setup>
 import { RouterLink, useRouter } from "vue-router";
-// --- IMPOR BARU: onUnmounted ---
 import { ref, onMounted, onUnmounted } from "vue"; 
 import { getUser, clearUser } from "../utils/storage";
 
@@ -157,26 +172,18 @@ const router = useRouter();
 const isLoggedIn = ref(false);
 const mobileOpen = ref(false);
 
-// --- FUNGSI BARU UNTUK MENGAMBIL STATUS LOGIN ---
 const checkLoginStatus = () => {
     isLoggedIn.value = !!getUser();
 };
 
 onMounted(() => {
-  // Panggil pertama kali
-  checkLoginStatus(); 
-
-  // --- BARIS PERBAIKAN PENTING ---
-  // Mendengarkan event 'login-success' dari window
+  checkLoginStatus();
   window.addEventListener('login-success', checkLoginStatus);
 });
 
-// --- BARIS PERBAIKAN PENTING ---
-// Hapus listener saat komponen dilepas untuk menghindari kebocoran memori
 onUnmounted(() => {
     window.removeEventListener('login-success', checkLoginStatus);
 });
-
 
 function toggleMenu() {
   mobileOpen.value = !mobileOpen.value;
@@ -188,7 +195,6 @@ function closeMenu() {
 
 function logoutUser() {
   clearUser();
-  // Panggil checkLoginStatus untuk mengupdate isLoggedIn segera
   checkLoginStatus(); 
   router.push("/login");
   closeMenu();
@@ -196,7 +202,6 @@ function logoutUser() {
 </script>
 
 <style scoped>
-/* SPRING PHYSICS ANIMATION */
 .burger-line {
   @apply absolute h-[3px] w-7 bg-blue-200 rounded-full;
   transition: transform 0.45s cubic-bezier(0.22, 1.61, 0.36, 1),
@@ -204,12 +209,10 @@ function logoutUser() {
               top 0.3s cubic-bezier(0.22, 1.61, 0.36, 1);
 }
 
-/* CLOSED STATE POSITIONS */
 .top-line-close { top: 8px; }
 .mid-line-close { top: 17px; }
 .bot-line-close { top: 26px; }
 
-/* OPEN STATE — WITH SPRING EFFECT */
 .top-line-open {
   top: 17px;
   transform: rotate(45deg) scale(1.05);
@@ -223,7 +226,6 @@ function logoutUser() {
   transform: rotate(-45deg) scale(1.05);
 }
 
-/* SlideDown Animation for mobile menu */
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
