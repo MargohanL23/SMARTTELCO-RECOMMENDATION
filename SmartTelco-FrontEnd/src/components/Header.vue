@@ -28,7 +28,7 @@
           </RouterLink>
 
           <RouterLink 
-            to="/simulation" 
+            to="/simulation"
             class="px-6 py-2 rounded-full text-blue-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
           >
             Simulation
@@ -118,7 +118,7 @@
           </RouterLink>
 
           <RouterLink 
-            to="/simulation" 
+            to="/simulation"
             @click="closeMenu" 
             class="px-4 py-3 rounded-lg text-blue-100 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
           >
@@ -185,7 +185,7 @@ let rafId = null;
 
 // login state
 const checkLoginStatus = () => {
-    isLoggedIn.value = !!getUser();
+  isLoggedIn.value = !!getUser();
 };
 
 onMounted(() => {
@@ -235,7 +235,7 @@ function logoutUser() {
   @apply absolute h-[3px] w-7 bg-blue-200 rounded-full;
   transition:
     transform 0.55s cubic-bezier(0.20, 1.4, 0.35, 1),
-              opacity 0.3s ease,
+    opacity 0.3s ease,
     top 0.45s cubic-bezier(0.20, 1.4, 0.35, 1),
     background-color 0.3s ease;
 }
