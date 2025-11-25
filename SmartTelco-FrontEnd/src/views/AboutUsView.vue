@@ -43,7 +43,7 @@
         <div class="relative group cursor-pointer mx-auto lg:mx-0">
           <div class="overflow-hidden rounded-lg shadow-2xl transform transition duration-500 hover:scale-[1.01]">
             <img 
-              src="/images/our_mission.jpg" 
+              src="/images/evaluasi.png" 
               alt="What We Do" 
               class="w-full h-[400px] object-cover"
             />

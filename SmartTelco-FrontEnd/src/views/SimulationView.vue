@@ -1,15 +1,26 @@
 <template>
   <div class="min-h-screen w-full overflow-x-hidden bg-white-900 pb-10">
 
-    <div class="absolute inset-0 z-0">
+    <div class="absolute top-[50px] left-[10px] z-0">
       <img 
         src="/images/LOGO3D_SMARTTELCO-NoBG.png" 
-        alt="Background Illustration" 
-        
+        alt="Background Illustration atas" 
+        class="w-64 md:w-80 opacity-50"        
       />
       </div>
     
-    <div class="container mx-auto px-4 md:px-0">
+    
+
+
+    <div class="absolute top-[1050px] right-[0px] z-0">
+      <img 
+        src="/images/LOGO3D_SMARTTELCO-NoBG.png" 
+        alt="Background Illustration bawah" 
+        class="w-64 md:w-96 opacity-50"
+      />
+      </div>
+    
+    <div class="relative z-10 container mx-auto px-4 py-10">
       
       <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center py-6 break-words">
         INPUT DATA REKOMENDASI
