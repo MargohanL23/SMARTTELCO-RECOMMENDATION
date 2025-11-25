@@ -5,7 +5,7 @@
       <img 
         src="/images/LOGO3D_SMARTTELCO-NoBG.png" 
         alt="Background Illustration atas" 
-        class="w-64 md:w-80 opacity-50"        
+        class="w-64 md:w-80 opacity-80"        
       />
       </div>
     
@@ -16,7 +16,7 @@
       <img 
         src="/images/LOGO3D_SMARTTELCO-NoBG.png" 
         alt="Background Illustration bawah" 
-        class="w-64 md:w-96 opacity-50"
+        class="w-64 md:w-96 opacity-80"
       />
       </div>
     
@@ -190,7 +190,7 @@
         <button 
           @click="getRekomendasi"
           :disabled="isLoading"
-          class="w-full bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-500 hover:to-blue-800 text-white font-bold py-3 md:py-4 rounded-xl shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 mt-4 disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-lg">
+          class="w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-800 text-white font-bold py-3 md:py-4 rounded-xl shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 mt-4 disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-lg">
           <span v-if="isLoading">Memproses...</span>
           <span v-else>DAPATKAN REKOMENDASI</span>
         </button>

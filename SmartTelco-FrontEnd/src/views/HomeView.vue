@@ -2,14 +2,14 @@
   <div class="min-h-screen bg-gradient-to-br from-white-900 to-purple-900 overflow-hidden">
     
     <div class="fixed inset-0 opacity-30 pointer-events-none">
-      <div class="absolute top-20 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl animate-pulse"></div>
+      <div class="absolute top-20 right-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl animate-pulse"></div>
       <div class="absolute bottom-20 left-10 w-96 h-96 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
     </div>
 
     <div class="relative z-10 space-y-20 pt-16 pb-16 px-6">
 
       <div class="max-w-7xl mx-auto">
-        <div class="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 backdrop-blur-md border border-blue-400/20 rounded-3xl overflow-hidden shadow-2xl">
+        
           
           <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
 
@@ -17,7 +17,7 @@
             
             <div class="flex flex-col justify-center space-y-8">
               <div>
-                <h1 class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-400 to-cyan-300 leading-tight tracking-tight mb-4">
+                <h1 class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-400 to-cyan-300 leading-tight tracking-tight mb-4 text-center">
                   Sistem Rekomendasi Paket Telco Cerdas
                 </h1>
                 <div class="h-1 w-24 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
@@ -52,7 +52,7 @@
               </div>
             </div>
           </div>
-        </div>
+        
       </div>
 
       <div 
