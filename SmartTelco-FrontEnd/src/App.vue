@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-white-900 to-purple-900 py-10 px-4">
+  <div class="min-h-screen bg-gradient-to-br from-white-900 to-purple-900 py-10 px-0 ">
     <Header />
     
-    <main class="pt-20 px-4 max-w-10xl mx-auto">
+    <main class="pt-10 px-0 max-w-10xl mx-auto">
       <RouterView />
     </main>
 

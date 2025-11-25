@@ -1,14 +1,17 @@
 <template>
   <div class="w-full h-full min-h-screen font-sans bg-white"> 
 
-    <div class="w-full h-full relative h-[700px] flex items-center justify-center overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <img 
+    <div class="relative w-full h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
+  
+  <div class="absolute inset-0 z-0">
+    <img 
       src="/images/foto atmin.jpg" 
       alt="About Us Hero" 
       class="w-full h-full object-cover brightness-50"
     />
-      </div>
+  </div>
+
+
       
       <div class="relative z-10 text-center">
         <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-widest uppercase drop-shadow-lg">

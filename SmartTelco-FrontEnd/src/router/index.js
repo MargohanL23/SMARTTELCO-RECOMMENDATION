@@ -38,7 +38,19 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+
+  // ----------------------------------------------------------------
+  // LOGIKA SCROLL KE ATAS (TAMBAHAN BARU)
+  // ----------------------------------------------------------------
+  scrollBehavior(to, from, savedPosition) {
+    // 1. Jika user tekan tombol Back/Forward browser, ingat posisi scroll
+    if (savedPosition) {
+      return savedPosition;
+    }
+    // 2. Jika pindah halaman biasa, paksa scroll ke paling atas (kiri:0, atas:0)
+    return { top: 0, left: 0 };
+  }
 });
 
 /* ───────────────────────────────────────────────
