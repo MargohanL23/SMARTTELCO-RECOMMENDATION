@@ -22,14 +22,14 @@
         <template v-if="isLoggedIn">
           <RouterLink 
             to="/home" 
-            class="px-6 py-2 rounded-full text-gray-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+            class="px-6 py-2 rounded-full text-gray-50 font-semibold hover:bg-gray-500/30 hover:text-white transition duration-300 border border-transparent hover:border-gray-400/50"
           >
             Home
           </RouterLink>
 
           <RouterLink 
             to="/simulation"
-            class="px-6 py-2 rounded-full text-blue-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+            class="px-6 py-2 rounded-full text-gray-50 font-semibold hover:bg-gray-500/30 hover:text-white transition duration-300 border border-transparent hover:border-gray-400/50"
           >
             Simulation
           </RouterLink>
@@ -38,7 +38,7 @@
         <!-- ABOUT SELALU ADA -->
         <RouterLink 
           to="/about" 
-          class="px-6 py-2 rounded-full text-blue-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+          class="px-6 py-2 rounded-full text-gray-50 font-semibold hover:bg-gray-500/30 hover:text-white transition duration-300 border border-transparent hover:border-gray-400/50"
         >
           About Us
         </RouterLink>
@@ -47,7 +47,7 @@
         <template v-if="!isLoggedIn">
           <RouterLink 
             to="/login" 
-            class="px-6 py-2 rounded-full text-blue-50 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+            class="px-6 py-2 rounded-full text-gray-50 font-semibold hover:bg-gray-500/30 hover:text-white transition duration-300 border border-transparent hover:border-gray-400/50"
           >
             Login
           </RouterLink>
@@ -120,7 +120,7 @@
           <RouterLink 
             to="/simulation"
             @click="closeMenu" 
-            class="px-4 py-3 rounded-lg text-blue-100 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+            class="px-4 py-3 rounded-lg text-gray-100 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
           >
             Simulation
           </RouterLink>
@@ -130,7 +130,7 @@
         <RouterLink 
           to="/about" 
           @click="closeMenu" 
-          class="px-4 py-3 rounded-lg text-blue-100 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
+          class="px-4 py-3 rounded-lg text-gray-100 font-semibold hover:bg-blue-500/30 hover:text-white transition duration-300 border border-transparent hover:border-blue-400/50"
         >
           About Us
         </RouterLink>
