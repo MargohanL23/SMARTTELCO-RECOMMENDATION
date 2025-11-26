@@ -17,7 +17,7 @@
         <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-widest uppercase drop-shadow-lg">
           About Us
         </h1>
-        <div class="w-24 h-1 bg-[#FFC107] mx-auto mt-0 rounded-full"></div>
+        <div class="w-24 h-1 bg-[#FFC107] mx-auto mt-4 rounded-full"></div>
       </div>
 
       <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">

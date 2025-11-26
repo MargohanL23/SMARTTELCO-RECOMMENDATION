@@ -17,14 +17,14 @@
             
             <div class="flex flex-col justify-center space-y-8">
               <div>
-                <h1 class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-blue-400 to-cyan-300 leading-tight tracking-tight mb-4 text-center">
+                <h1 class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-800 via-red-400 to-cyan-300 leading-tight tracking-tight mb-4 text-center">
                   Sistem Rekomendasi Paket Telco Cerdas
                 </h1>
                 <div class="h-1 w-24 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
               </div>
 
               <p class="text-blue-750/200 text-lg leading-relaxed font-light text-justify">
-                Didukung oleh <span class="font-semibold text-blue-900">Machine Learning (XGBoost)</span>, sistem ini melakukan personalisasi penawaran paket dengan akurasi tinggi. Kami menganalisis secara multidimensi pola perilaku pelanggan—mulai dari frekuensi top-up, rata-rata penggunaan data (GB), durasi panggilan (Menit), hingga skor keluhan—untuk memprediksi penawaran yang paling optimal.
+                Didukung oleh <span class="font-semibold text-red-900">Machine Learning (XGBoost)</span>, sistem ini melakukan personalisasi penawaran paket dengan akurasi tinggi. Kami menganalisis secara multidimensi pola perilaku pelanggan—mulai dari frekuensi top-up, rata-rata penggunaan data (GB), durasi panggilan (Menit), hingga skor keluhan—untuk memprediksi penawaran yang paling optimal.
               </p>
 
               <p class="text-blue-750/100 text-base font-light">
@@ -61,7 +61,7 @@
         :class="{'opacity-100 translate-y-0': isBusinessVisible, 'opacity-0 translate-y-10': !isBusinessVisible}"
       >
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-300 mb-4">
+          <h2 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-cyan-300 mb-4">
             Nilai Bisnis & Inovasi
           </h2>
           <div class="h-1 w-32 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full mx-auto"></div>
@@ -123,7 +123,7 @@
         :class="{'opacity-100 translate-y-0': isOffersVisible, 'opacity-0 translate-y-10': !isOffersVisible}"
       >
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-300 mb-4">
+          <h2 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-cyan-300 mb-4">
             Jelajahi Jenis Penawaran Kami
           </h2>
           <p class="text-lg text-gray-700 max-w-3xl mx-auto">

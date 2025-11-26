@@ -1,5 +1,5 @@
 {
-    "next_customer_id": 10008,
+    "next_customer_id": 10009,
     "users": [
         {
             "customer_id": "C00000",
@@ -47,6 +47,12 @@
             "customer_id": "C10007",
             "email": "gaga@gaga.com",
             "password": "gaga1234",
+            "role": "User"
+        },
+        {
+            "customer_id": "C10008",
+            "email": "gohan@gohan.com",
+            "password": "gohan1234",
             "role": "User"
         }
     ]
