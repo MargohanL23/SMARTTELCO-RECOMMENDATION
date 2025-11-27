@@ -17,7 +17,7 @@
             
             <div class="flex flex-col justify-center space-y-8">
               <div>
-                <h1 class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-800 via-red-400 to-cyan-300 leading-tight tracking-tight mb-4 text-left">
+                <h1 class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-800 via-red-400 to-cyan-300 leading-tight tracking-tight mb-4 text-center">
                   Sistem Rekomendasi Paket Telco Cerdas
                 </h1>
                 <div class="h-1 w-24 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
