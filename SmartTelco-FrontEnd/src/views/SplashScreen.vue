@@ -39,7 +39,7 @@ export default {
     // Properti untuk mengontrol kapan screen menghilang
     duration: {
       type: Number,
-      default: 2000, // Durasi default 2 detik
+      default: 5000, // Durasi default 5 detik
     },
     // Properti untuk memilih logo (HP atau Website)
     useMobileLogo: {
