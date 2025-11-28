@@ -56,7 +56,6 @@ export default {
         : '/images/logo_smarttelco.png';
 
     onMounted(() => {
-      // Setelah komponen dipasang, tunggu durasi yang ditentukan lalu sembunyikan
       setTimeout(() => {
         isLoaded.value = true;
       }, props.duration);
@@ -68,6 +67,7 @@ export default {
 </script>
 
 <style scoped>
+
 /* --- ANIMASI CSS UNTUK LOADER --- */
 .splash-screen {
   opacity: 1;
@@ -75,7 +75,7 @@ export default {
 }
 .splash-screen.opacity-0 {
     opacity: 0;
-    pointer-events: none; /* KRUSIAL: Agar tidak menghalangi klik */
+    pointer-events: none; /* tidak menghalangi klik */
 }
 
 /* Loader Dots */
