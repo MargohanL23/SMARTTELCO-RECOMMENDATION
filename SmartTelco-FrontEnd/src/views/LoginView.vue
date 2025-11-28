@@ -9,37 +9,49 @@
       />
     </div>
 
-    <div class="relative z-10 w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 rounded-xl shadow-2xl overflow-hidden bg-white/70 backdrop-blur-lg border border-white/50">
+    <!-- Glass Card -->
+    <div 
+      class="relative z-10 w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 
+             rounded-2xl shadow-2xl overflow-hidden 
+             bg-white/20 backdrop-blur-xl border border-black/10">
 
-      <div class="flex flex-col justify-center p-8 lg:p-10 space-y-6 text-red text-left"> 
-        <h2 class="text-2xl lg:text-3xl font-extrabold mb-4 border-b border-blue-400 pb-3 text-center">
-          Sistem Rekomendasi Paket Telco Cerdas
+      <!-- Left Section -->
+      <div class="hidden lg:flex flex-col justify-center p-10 space-y-6 text-black">
+        <h2 class="text-3xl font-extrabold mb-4 border-b border-black/30 pb-3">
+          Sistem Rekomendasi Paket Jaringan Cerdas
         </h2>
-        <p class="text-sm leading-relaxed opacity-90 text-justify">
-          Masuk ke SmartTelco untuk mengakses mesin prediksi yang didukung oleh <span class="font-semibold text-blue-900">Machine Learning (XGBoost)</span>. Kami mengubah pola perilaku pelanggan (seperti penggunaan data, panggilan, dan pengeluaran) menjadi penawaran paket yang sangat relevan dan tepat sasaran.
+
+        <p class="text-sm leading-relaxed opacity-90">
+          Masuk ke SmartTelco untuk mengakses mesin prediksi yang didukung oleh 
+          <span class="font-semibold text-black">Machine Learning (XGBoost)</span>.
         </p>
-        <ul class="text-sm space-y-2 pt-2">
-          <li class="flex items-start">
-            <span class="text-pink-600 mr-2 text-xl">🎯</span> Tingkatkan konversi penjualan (Up-selling & Cross-selling).
+
+        <ul class="text-sm space-y-3 pt-2">
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-bullseye text-red-500 text-lg"></i>
+            Tingkatkan konversi penjualan (Up-selling & Cross-selling)
           </li>
-          <li class="flex items-start">
-            <span class="text-indigo-600 mr-2 text-xl">📈</span> Dapatkan rekomendasi alternatif (probabilitas tinggi).
+
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-chart-line text-red-500 text-lg"></i>
+            Dapatkan rekomendasi alternatif (probabilitas tinggi)
           </li>
-          <li class="flex items-start">
-            <span class="text-blue-600 mr-2 text-xl">🛡️</span> Minimalkan Churn Rate dengan penawaran retensi proaktif.
+
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-shield-halved text-red-500 text-lg"></i>
+            Minimalkan Churn Rate dengan penawaran retensi proaktif
           </li>
         </ul>
       </div>
 
-      <div class="w-full p-8 md:p-12 flex flex-col justify-center bg-transparent border-t lg:border-t-0 lg:border-l border-white/50"> 
+      <!-- Right Section (Login Form) -->
+      <div class="w-full p-8 md:p-12 flex flex-col justify-center 
+                  bg-white/40 backdrop-blur-2xl border-l border-white/20">
 
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            class="mx-auto h-12 w-auto"
-            src="/images/logo_smarttelcoo.png"
-            alt="SmartTelco"
-          />
-          <h2 class="mt-8 text-center text-2xl font-bold tracking-tight" style="color:#842A3B;">
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm text-center">
+          <img class="mx-auto h-12 w-auto" src="/images/logo_smarttelcoo.png" alt="SmartTelco" />
+
+          <h2 class="mt-6 text-2xl font-bold tracking-tight" style="color:#842A3B;">
             Masuk ke Sistem
           </h2>
         </div>
@@ -47,38 +59,55 @@
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-sm">
           <form class="space-y-6" @submit.prevent="handleLogin">
 
+            <!-- Email -->
             <div>
-              <label class="block text-sm font-medium text-gray-700">Email / Customer ID</label>
-              <input
-                v-model="identifier"
-                type="text"
-                required
-                class="block w-full rounded-md px-3 py-2 border border-gray-300 outline-none text-gray-800 placeholder-gray-500 shadow-sm focus:ring-[#842A3B] focus:border-[#842A3B]"
-              />
+              <label class="block text-sm font-medium text-gray-800">Email / Customer ID</label>
+              <div class="relative">
+                <i class="fa-solid fa-user absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                <input
+                  v-model="identifier"
+                  type="text"
+                  required
+                  class="block w-full rounded-md pl-10 pr-3 py-2 border border-gray-300 
+                         text-gray-800 shadow-sm outline-none
+                         bg-white/80 backdrop-blur 
+                         focus:ring-[#842A3B] focus:border-[#842A3B]"
+                />
+              </div>
             </div>
 
+            <!-- Password -->
             <div>
-              <label class="block text-sm font-medium text-gray-700">Password</label>
-              <input
-                v-model="password"
-                type="password"
-                required
-                class="block w-full rounded-md px-3 py-2 border border-gray-300 outline-none text-gray-800 placeholder-gray-500 shadow-sm focus:ring-[#842A3B] focus:border-[#842A3B]"
-              />
+              <label class="block text-sm font-medium text-gray-800">Password</label>
+              <div class="relative">
+                <i class="fa-solid fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                <input
+                  v-model="password"
+                  type="password"
+                  required
+                  class="block w-full rounded-md pl-10 pr-3 py-2 border border-gray-300 
+                         text-gray-800 shadow-sm outline-none
+                         bg-white/80 backdrop-blur 
+                         focus:ring-[#842A3B] focus:border-[#842A3B]"
+                />
+              </div>
             </div>
 
+            <!-- Error -->
             <p v-if="errorMsg" class="text-red-700 text-sm text-center">{{ errorMsg }}</p>
 
+            <!-- Button -->
             <button
               type="submit"
-              class="w-full rounded-md px-3 py-2 text-white font-semibold shadow-md hover:opacity-90 transition"
+              class="w-full rounded-md px-3 py-2 text-white font-semibold shadow-md 
+                     hover:opacity-90 transition"
               style="background-color:#842A3B;"
             >
               Masuk
             </button>
           </form>
 
-          <p class="mt-6 text-center text-sm text-gray-600">
+          <p class="mt-6 text-center text-sm text-gray-700">
             Belum punya akun?
             <router-link to="/register" class="font-semibold hover:underline" style="color:#842A3B;">
               Register di sini
