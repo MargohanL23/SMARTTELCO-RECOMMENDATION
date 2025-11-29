@@ -1,7 +1,7 @@
 <template>
   <div class="splash-screen fixed inset-0 flex flex-col items-center justify-center z-50 transition-opacity duration-1000" 
        :class="{ 'opacity-0 invisible': isLoaded }"
-       style="background-color: #902809ff;">
+       style="background-color: #842A3B;">
     
     <div class="text-center p-10">
       

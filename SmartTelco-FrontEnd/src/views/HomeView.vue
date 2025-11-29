@@ -8,7 +8,7 @@
 
     <div class="relative z-10 space-y-20 pt-16 pb-16 px-6">
 
-      <div class="max-w-7xl mx-auto">
+      <div class="max-w-8xl mx-auto">
           
           <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
 
@@ -32,7 +32,7 @@
 
               <RouterLink
                 to="/simulation"
-                class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-300 hover:to-orange-300 text-gray-900 font-extrabold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-300 w-fit group">
+                class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-red-400 to-orange-400 hover:from-red-300 hover:to-orange-300 text-gray-900 font-extrabold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-300 w-fit group">
                 <span>→ MULAI SIMULASI</span>
                 <span class="group-hover:translate-x-1 transition duration-300">→</span>
               </RouterLink>
@@ -45,7 +45,7 @@
                   src="/images/SmartTelco_ilustration.png"
                   alt="Hero Illustration"
                   class="w-full object-cover rounded-3xl hover:scale-105 transition-transform duration-500"
-                  :style="{ height: '450px' }" 
+                  :style="{ height: '550px' }" 
                 />  
                 
               </div>
@@ -60,7 +60,7 @@
         :class="{'opacity-100 translate-y-0': isBusinessVisible, 'opacity-0 translate-y-10': !isBusinessVisible}"
       >
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-cyan-300 mb-4">
+          <h2 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-300 mb-4">
             Nilai Bisnis & Inovasi
           </h2>
           <div class="h-1 w-32 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full mx-auto"></div>
@@ -255,7 +255,7 @@
         class="max-w-4xl mx-auto transition-opacity duration-1000 transform"
         :class="{'opacity-100 translate-y-0': isCtaVisible, 'opacity-0 translate-y-10': !isCtaVisible}"
       >
-        <div class="relative bg-gradient-to-br from-red-500/20 to-gray-500/20 backdrop-blur-lg border border-blue-300/30 rounded-3xl p-12 shadow-2xl text-center overflow-hidden group">
+        <div class="relative bg-gradient-to-br from-red-500/20 to-gray-500/20 backdrop-blur-lg border border-gray-300/30 rounded-3xl p-12 shadow-2xl text-center overflow-hidden group">
           <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
           <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 group-hover:opacity-30 transition duration-500"></div>
           

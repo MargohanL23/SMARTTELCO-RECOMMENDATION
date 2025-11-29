@@ -26,7 +26,7 @@
         INPUT DATA REKOMENDASI
       </h2>
 
-      <div class="w-full max-w-3xl mx-auto bg-gray-100 shadow-2xl shadow-black/20 p-5 md:p-8 rounded-2xl flex flex-col gap-6 relative z-10">
+      <div class="w-full max-w-8xl mx-auto bg-gray-100 shadow-2xl shadow-black/20 p-5 md:p-8 rounded-2xl flex flex-col gap-6 relative z-10">
 
         <div class="w-full">
           <label class="block mb-2 font-medium text-gray-700 text-sm md:text-base">Jenis Paket:</label>

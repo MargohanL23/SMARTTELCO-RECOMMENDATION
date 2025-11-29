@@ -54,7 +54,7 @@
 
           <RouterLink 
             to="/register" 
-            class="px-6 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 font-bold hover:from-yellow-300 hover:to-orange-300 transition duration-300 shadow-lg hover:shadow-xl"
+            class="px-6 py-2 rounded-full bg-gradient-to-r from-red-400 to-gray-400 text-white font-bold hover:from-red-300 hover:to-gray-300 transition duration-300 shadow-lg hover:shadow-xl"
           >
             Register
           </RouterLink>
@@ -148,7 +148,7 @@
           <RouterLink 
             to="/register" 
             @click="closeMenu" 
-            class="px-4 py-3 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 font-bold hover:from-yellow-300 hover:to-orange-300 transition duration-300 text-center"
+            class="px-4 py-3 rounded-lg bg-gradient-to-r from-red-400 to-gray-400 text-gray-900 font-bold hover:from-yellow-300 hover:to-orange-300 transition duration-300 text-center"
           >
             Register
           </RouterLink>
