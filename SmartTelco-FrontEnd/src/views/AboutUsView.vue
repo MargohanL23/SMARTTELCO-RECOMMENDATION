@@ -196,7 +196,7 @@ const teamMembers = ref([
   {
     name: "Muhammad Izhar Fadillah",
     role: "Front-End Developer",
-    image: "/images/Foto izhar.jpg",
+    image: "/images/Foto_izhar.jpg",
     instagram: "https://www.instagram.com/izhr_fdlh",
     linkedin: "https://id.linkedin.com/in/muhammad-izhar-fadillah-3a8971347"
   },
