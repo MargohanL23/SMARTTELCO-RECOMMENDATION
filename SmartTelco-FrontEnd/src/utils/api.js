@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "/api";
 
 export async function apiPost(path, data) {
   const res = await fetch(`${BASE_URL}${path}`, {
