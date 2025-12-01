@@ -78,7 +78,7 @@ def get_next_customer_id(users_data):
 
 # ----------------- ENDPOINT REGISTER BARU -----------------
 
-@app.route('/register', methods=['POST'])
+@app.route('/api/register', methods=['POST'])
 def register_user():
     data = request.get_json()
     email = data.get('email')
@@ -119,7 +119,7 @@ def register_user():
 
 # ----------------- ENDPOINT LOGIN BARU (FIXED ROLE MANAGEMENT) -----------------
 
-@app.route('/login', methods=['POST'])
+@app.route('/api/login', methods=['POST'])
 def login_user():
     data = request.get_json()
     email = data.get('email')
