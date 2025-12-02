@@ -247,7 +247,7 @@ async function getRekomendasi() {
 
     console.log("Mengirim data ke backend...", payload);
 
-    const response = await apiPost("/api/recommend", payload);
+    const response = await apiPost("/recommend", payload);
 
     if (response.error) {
       alert("Gagal: " + response.error);
