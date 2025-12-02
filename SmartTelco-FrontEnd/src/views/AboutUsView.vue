@@ -1,17 +1,15 @@
 <template>
   <div class="w-full h-full min-h-screen font-sans bg-white"> 
 
-    <div class="relative w-full h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
+    <div class="relative w-full h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden leading-[0]">
   
   <div class="absolute inset-0 z-0">
     <img 
-      src="/images/foto atmin (3).jpg" 
+      src="/public/images/foto_atmin_(3).jpg" 
       alt="About Us Hero" 
-      class="w-full h-full object-cover brightness-50"
+      class="w-full h-full object-cover brightness-50 block pointer-events-none select-none"
     />
   </div>
-
-
       
       <div class="relative z-10 text-center">
         <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-widest uppercase drop-shadow-lg">
@@ -189,35 +187,35 @@ const teamMembers = ref([
   {
     name: "Margohan L. Siringo Ringo",
     role: "Back-End Developer",
-    image: "/images/foto_gohan.jpg",
+    image: "/public/images/foto_gohan.jpg",
     instagram: "https://www.instagram.com/gohanl_srn",
     linkedin: "http://www.linkedin.com/in/margohanlsiringo"
   },
   {
     name: "Muhammad Izhar Fadillah",
     role: "Front-End Developer",
-    image: "/images/Foto_izhar.jpg",
+    image: "/public/images/Foto_izhar.jpg",
     instagram: "https://www.instagram.com/izhr_fdlh",
     linkedin: "https://id.linkedin.com/in/muhammad-izhar-fadillah-3a8971347"
   },
   {
     name: "M. Varrel Nuwi Zulyanno",
     role: "Front-End Developer",
-    image: "/images/varrelnuwi.jpg",
+    image: "/public/images/varrelnuwi.jpg",
     instagram: "https://www.instagram.com/varrelnwz_",
     linkedin: "https://www.linkedin.com/in/muhammad-varrel-nuwi-zulyanno"
   },
   {
     name: "Hoerunnisa",
     role: "Machine Learning Engineer",
-    image: "/images/foto_ica.jpg",
+    image: "/public/images/foto_ica.jpg",
     instagram: "https://www.instagram.com/_hoerunnisaa?igsh=MTN4dDBoMW9mOWh6Yg%3D%3D&utm_source=qr",
     linkedin: "http://linkedin.com/in/hoerunnisaa"
   },
   {
     name: "Moch. Faisal Syahwaludin",
     role: "Machine Learning Engineer",
-    image: "/images/foto_faisal.jpg",
+    image: "/public/images/foto_faisal.jpg",
     instagram: "https://www.instagram.com/mfaisal.sy?igsh=MzNlemMxcXdjbm8w&utm_source=qr",
     linkedin: "https://www.linkedin.com/in/mochfaisalsyahwaludin"
   }
