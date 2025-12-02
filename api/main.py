@@ -18,7 +18,7 @@ app = Flask(__name__)
 
 # Mengambil SECRET_KEY dari .env
 app.secret_key = os.getenv('SECRET_KEY', 'default_fallback_secret') 
-CORS(app) 
+CORS(app, supports_credentials=True) 
 
 # Tentukan path file (DIUBAH UNTUK MODEL 17-FITUR)
 MODEL_PATH = 'telco_pipeline_model_xgb.pkl' 
