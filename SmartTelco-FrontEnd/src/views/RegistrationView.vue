@@ -133,6 +133,12 @@ export default {
 
     const handleRegister = async () => {
       errorMsg.value = "";
+
+      if (password.value.length < 6) {
+        errorMsg.value = "Password minimal 6 karakter.";
+        return;
+      }
+
       const payload = {
         email: email.value,
         password: password.value,
