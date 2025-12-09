@@ -3,9 +3,9 @@
 ## Proyek: Telco – Product Recommendation Offer based on Customer Behaviour
 
 SmartTelco adalah aplikasi **Full-Stack** yang mendemonstrasikan implementasi **Machine Learning** untuk personalisasi penawaran produk dalam industri telekomunikasi.  
-Sistem ini menggunakan model **XGBoost Classifier** yang dilatih pada data perilaku historis pelanggan untuk memprediksi **Target Offer** paling optimal, sehingga meningkatkan **acceptance rate** dan **loyalitas pelanggan**.
+Sistem ini menggunakan model **XGBoost Classifier** yang dilatih pada data perilaku historis pelanggan untuk memprediksi **Target Offer** paling optimal, sehingga meningkatkan **Return rate** dan **loyalitas pelanggan**.
 
-Antarmuka pengguna (UI) didesain dengan tema **Dark Mode**, dilengkapi **Splash Screen** dan **Dashboard Admin**.
+Antarmuka pengguna (UI) didesain dengan tema **Gradient Merah Maron dan Orange** dan dilengkapi **Splash Screen**.
 
 ---
 
